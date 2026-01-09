@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== ROOT COLORS ===== */
+:root {
+    --primary-dark: #19323c;
+    --accent-red: #f2545b;
+    --accent-rose: #a93f55;
+    --light-bg: #f3f7f0;
+    --muted-gold: #8c5e58;
+}
+
+/* ===== BODY ===== */
+body {
+    background: linear-gradient(120deg, #19323c, #0f1f26);
+    min-height: 100vh;
+}
+
+/* ===== PAGE ANIMATION ===== */
+.page {
+    animation: fadeSlide 0.8s ease;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== BRANDING SECTION ===== */
+.branding {
+    background: radial-gradient(circle at top, #19323c, #0b1a20);
+    color: var(--light-bg);
+    padding: 60px;
+}
+
+.branding h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    color: var(--accent-red);
+}
+
+.branding span {
+    color: var(--muted-gold);
+}
+
+.branding p,
+.branding li {
+    color: #cfd8dc;
+}
+
+/* ===== FORM CARD ===== */
+.form-card {
+    background: rgba(243, 247, 240, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* ===== INPUTS ===== */
+.form-control {
+    background: transparent;
+    border: 1px solid rgba(243,247,240,0.3);
+    color: var(--light-bg);
+    padding: 12px;
+}
+
+.form-control::placeholder {
+    color: #cfd8dc;
+}
+
+.form-control:focus {
+    border-color: var(--accent-red);
+    box-shadow: none;
+    background: transparent;
+    color: var(--light-bg);
+}
+
+/* ===== BUTTON ===== */
+.btn-gold {
+    background: linear-gradient(135deg, var(--accent-red), var(--accent-rose));
+    color: white;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 12px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(242,84,91,0.4);
+}
+
+/* ===== LINKS ===== */
+.link-gold {
+    color: var(--muted-gold);
+    text-decoration: none;
+}
+
+.link-gold:hover {
+    color: var(--accent-red);
+    text-decoration: underline;
+}
+
+/* ===== SMALL TEXT ===== */
+.text-muted {
+    color: #cfd8dc !important;
+}
+/* ===== FORM BACKGROUND WITH IMAGE ===== */
+.form-section {
+    background: 
+        linear-gradient(
+            rgba(25, 50, 60, 0.85),
+            rgba(25, 50, 60, 0.85)
+        ),
+        url("../images/suits-bg.jpg");
+        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
